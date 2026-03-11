@@ -190,6 +190,38 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* This hides the other 5 images */
+    border-radius: 15px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* This makes it slide smoothly */
+}
+
+.slide {
+    min-width: 100%; /* Each image takes up the full window */
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 190, 51, 0.8);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.next-btn { right: 0; }
+.prev-btn { left: 0; }
+
 header {
     position: sticky; /* The magic command */
     top: 0;           /* Tells it where to "stick" (the very top) */
@@ -246,4 +278,25 @@ header {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* This code only runs when the screen is smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    
+    /* 1. Stack the About and Contact sections vertically */
+    .about-container, 
+    .contact-wrapper {
+        flex-direction: column; 
+    }
+
+    /* 2. Adjust the Hero Text size so it doesn't overflow */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    /* 3. Make images take full width on mobile */
+    .about-img, .map-container {
+        width: 100%;
+        min-width: 100%;
+    }
 }
