@@ -69,6 +69,31 @@ footer { background: #222831; padding: 50px 10% 20px; text-align: center; }
     .about-container, .contact-wrapper { flex-direction: column; }
 }
 
+@media (max-width: 768px) {
+    /* Stack the navbar elements */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Add space between logo and links */
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Allows links to go to a second line if needed */
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .nav-links li {
+        margin: 5px 10px; /* Reduces spacing between links on small screens */
+    }
+
+    /* Hide the 'Order Online' button on very small screens or make it smaller */
+    .user-options {
+        margin-top: 15px;
+    }
+}
+
 /* Update the container to align things better */
 .about-container {
     display: flex;
