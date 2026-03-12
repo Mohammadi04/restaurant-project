@@ -1,302 +1,99 @@
-/* Resetting some default browser spacing */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background-color: black; font-family: 'Poppins', sans-serif; color: white; }
 
-body{
-    background-color:black ; /*Dark Background*/
-    /*font-family: 'Times New Roman', sans-serif;*/
-    font-family: 'Dancing Script', cursive;
-    color:white;
-}
-.logo a{
-    color: burlywood;
-    text-decoration: none;
-    font-size: 35px;
-    font-weight: bold;
-    font-style: italic;
-}
-.logo a:hover{
-    color:#ffbe33;
-}
-/*Flexbox Layout*/
-.navbar{
-    display: flex;
-    justify-content: space-between; /*Pushes logo to left, button to right */
-    align-items: center; /*Centers them vertically */
-    padding: 20px 10%;
-}
-
-.nav-links{
-    display: flex;
-    list-style: none; /*Removes the dots */
-
-}
-
-.nav-links li{
-    margin: 0 20px; /*Space between links*/
-}
-
-.nav-links a{
-    text-decoration: none; /* Remoes the underline */
-    color: burlywood;
-    font-weight: bold;
-}
-
-
-/* That yellow button from the image */
-.user-options a{
-    background-color: burlywood;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-
-}
-
-.hero{
-    height: 90vh; /*This makes the hero section take up 90% of the screen height */
-    background-color: #222831;
-    display: flex;
-    align-items: center; /* centers content vertically */
-    padding: 0 10%;
-    /*Later we will add a background image here*/
-    background-image: linear-gradient(to right, rgba(34, 40, 49, 0.9), rgba(34, 40, 49, 0.2)), url('images/hero-burger.jpg');
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
-}
-
-.hero-content{
-    max-width: 600px; /* Prevents the text from stretching too wide*/
-}
-
-.hero-content h1{
-    font-size: 3.5rem; /* large, bold title*/
-    margin-bottom: 20px;
-    font-style: italic; /*matches the 'Name' vibe */
-}
-
-.hero-content p{
-    font-size: 1.1rem;
-    line-height: 1.6; /* Adds space between lines for readiability*/
-    margin-bottom: 30px;;
-}
-/*Reusng your yellow button style*/
-.btn-yellow{
-    background-color: #ffbe33;
-    color: white;
-    padding: 12px 35px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block; /*Makes the padding work correctly*/
-}
-
-.menu-section{
-    padding: 600px 10%;
-    background-color: #ffffff;
-    color:#222831;
-    text-align: center;
-}
-.section-title{
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-family: 'Dancing Script', cursive;
-}
-/*The Grid Layout*/
-.menu-grid{
-    display: grid;
-    /*This tells the browser: "Make as many colums as fit, but a least 300px wide*/
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /*space between the cards*/
-}
-.menu-card{
-    background-color: #222831;
-    color:white;
-    border-radius: 15px;
-    overflow: hidden; /* Keeps the image from spilling out of rounded corners*/
-    padding: 20px;
-    transition: trasfrom 0.3s;
-}
-
-.menu-card:hover{
-    transform: translateY(-10px);/* makes the card lift up when you hover*/
-}
-
-.menu-card img{
-    width: 100px;
-    height: 200px;
-    object-fit: contain; /*keeps food iamges from look squished*/
-}
-.options{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-.cart-btn{
-    background-color: #ffbe33;
-    padding:10px;
-    border-radius: 50%;
-    text-decoration: none;
-    color:white;
-}
-
-.img-box img {
-    width: 100%;
-    height: 200px;      /* Force a specific height */
-    object-fit: contain; /* This prevents the image from stretching and pushing text out */
-    margin-bottom: 15px;
-}
-
-.detail-box h5 {
-    font-size: 1.5rem;
-    color: #ffffff;     /* Ensures the text isn't black-on-black */
-    margin-bottom: 10px;
-    display: block;     /* Forces it to show up as a block */
-}
-
-.contact-section { padding: 80px 10%; background: #fff; color: #222; }
-
-.contact-container {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.contact-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    min-width: 300px;
-}
-
-.contact-form input, .contact-form textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-}
-
-.map-container {
-    flex: 1;
-    min-width: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.slider-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden; /* This hides the other 5 images */
-    border-radius: 15px;
-}
-
-.slider-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* This makes it slide smoothly */
-}
-
-.slide {
-    min-width: 100%; /* Each image takes up the full window */
-}
-
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 190, 51, 0.8);
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-}
-
-.next-btn { right: 0; }
-.prev-btn { left: 0; }
-
+/* HEADER */
 header {
-    position: sticky; /* The magic command */
-    top: 0;           /* Tells it where to "stick" (the very top) */
-    z-index: 1000;    /* Puts the header on a "higher layer" so it stays ABOVE images/text */
-    
-    background-color: #222831; /* Give it a solid color so you can't see text behind it */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Adds a subtle shadow for depth */
+    position: sticky; top: 0; z-index: 1000;
+    background-color: #222831; padding: 15px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo a { color: burlywood; text-decoration: none; font-size: 35px; font-weight: bold; font-style: italic; font-family: 'Dancing Script', cursive; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin: 0 20px; }
+.nav-links a { text-decoration: none; color: burlywood; font-weight: bold; transition: 0.3s; }
+.nav-links a:hover { color: #ffbe33; }
+.user-options a { background-color: burlywood; color: white; padding: 10px 25px; border-radius: 30px; text-decoration: none; }
 
-
-.contact-section {
-    padding: 90px 10%;
-    background-color: #f8f9fa; /* Light grey/white for contrast */
+/* HERO */
+.hero {
+    height: 90vh; display: flex; align-items: center; padding: 0 10%;
+    background: linear-gradient(to right, rgba(34, 40, 49, 0.9), rgba(34, 40, 49, 0.2)), url('images/hero-burger.jpg');
+    background-size: cover; background-position: center;
 }
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; font-style: italic; font-family: 'Dancing Script', cursive; }
+.hero-content p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; }
+.btn-yellow { background-color: #ffbe33; color: white; padding: 12px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; }
 
-.contact-wrapper {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap; /* Important for mobile! */
-}
+/* MENU SECTION */
+.menu-section { padding: 80px 10%; background-color: #ffffff; color: #222831; text-align: center; }
+.section-title { font-size: 2.5rem; margin-bottom: 40px; font-family: 'Dancing Script', cursive; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.menu-card { background-color: #222831; color: white; border-radius: 15px; overflow: hidden; padding: 20px; transition: transform 0.3s; }
+.menu-card:hover { transform: translateY(-10px); }
+.img-box img { width: 100%; height: 200px; object-fit: contain; margin-bottom: 15px; }
 
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+/* ABOUT SECTION */
+.about-section { padding: 80px 10%; background: #222831; color: white; }
+.about-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.about-img, .about-text { flex: 1; min-width: 300px; }
+.about-text h2 { font-family: 'Dancing Script', cursive; font-size: 3rem; margin-bottom: 20px; }
 
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-}
+/* GALLERY */
+.gallery-section { padding: 80px 10%; background: white; text-align: center; color: black; }
+.slider-container { position: relative; max-width: 800px; margin: auto; overflow: hidden; border-radius: 15px; }
+.slider-wrapper { display: flex; transition: transform 0.5s ease-in-out; }
+.slide { min-width: 100%; }
 
-.contact-form input:focus {
-    border-color: #ffbe33; /* Glows yellow when you click it */
-}
+/* CONTACT */
+.contact-section { padding: 80px 10%; background: #f8f9fa; color: #222; }
+.contact-wrapper { display: flex; gap: 40px; flex-wrap: wrap; }
+.contact-form { flex: 1; display: flex; flex-direction: column; gap: 15px; min-width: 300px; }
+.map-container { flex: 1; height: 400px; min-width: 300px; border-radius: 15px; overflow: hidden; }
+.map-container iframe { width: 100%; height: 100%; border: none; }
 
-.map-container {
-    flex: 1;
-    min-width: 300px;
-    height: 400px;
-    border-radius: 15px;
-    overflow: hidden; /* Clips the sharp corners of the map */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+/* FOOTER */
+footer { background: #222831; padding: 50px 10% 20px; text-align: center; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
+.footer-box h3 { color: burlywood; margin-bottom: 15px; }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
+/* REVEAL ON SCROLL */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
 
-/* This code only runs when the screen is smaller than 768px (tablets and phones) */
+/* MOBILE */
 @media (max-width: 768px) {
-    
-    /* 1. Stack the About and Contact sections vertically */
-    .about-container, 
-    .contact-wrapper {
-        flex-direction: column; 
-    }
+    .hero-content h1 { font-size: 2.5rem; }
+    .about-container, .contact-wrapper { flex-direction: column; }
+}
 
-    /* 2. Adjust the Hero Text size so it doesn't overflow */
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
+/* Update the container to align things better */
+.about-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* Centers the whole pair */
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px; /* Keeps the section from getting too wide */
+    margin: 0 auto;    /* Centers the container on the page */
+}
 
-    /* 3. Make images take full width on mobile */
-    .about-img, .map-container {
-        width: 100%;
-        min-width: 100%;
-    }
+/* Constrain the image box so it isn't "half the screen" */
+.about-img {
+    flex: 0 0 400px; /* Tells it: Don't grow, don't shrink, stay 400px wide */
+    max-width: 100%; /* Safety for mobile */
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Matches your card style */
+    box-shadow: 10px 10px 0px #ffbe33; /* Optional: adds a stylish yellow frame effect */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
 }
