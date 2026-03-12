@@ -70,27 +70,34 @@ footer { background: #222831; padding: 50px 10% 20px; text-align: center; }
 }
 
 @media (max-width: 768px) {
-    /* Stack the navbar elements */
+    /* 1. Constrain the overall nav width and center it */
     .navbar {
         flex-direction: column;
-        padding: 10px;
+        padding: 10px 5%;
+        max-width: 90%; /* Prevents it from touching the screen edges */
+        margin: 0 auto; /* Centers the nav bar on the screen */
     }
 
-    /* Add space between logo and links */
+    /* 2. Make the logo a bit smaller for better fit */
+    .logo a {
+        font-size: 28px;
+    }
+
+    /* 3. Reduce link spacing so they don't wrap too much */
     .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap; /* Allows links to go to a second line if needed */
+        margin-top: 10px;
         justify-content: center;
-        padding-left: 0;
+        padding: 0;
     }
 
     .nav-links li {
-        margin: 5px 10px; /* Reduces spacing between links on small screens */
+        margin: 5px 10px; /* Thinner spacing between menu items */
     }
 
-    /* Hide the 'Order Online' button on very small screens or make it smaller */
-    .user-options {
-        margin-top: 15px;
+    /* 4. Shrink the order button so it fits the narrow layout */
+    .user-options a {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 }
 
@@ -116,6 +123,12 @@ footer { background: #222831; padding: 50px 10% 20px; text-align: center; }
     height: auto;
     border-radius: 15px; /* Matches your card style */
     box-shadow: 10px 10px 0px #ffbe33; /* Optional: adds a stylish yellow frame effect */
+}
+
+.about-img img {
+    max-width: 250px; /* Constrains the picture to be 'little' on phones */
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .about-text {
