@@ -3,136 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Food </title>
+    <title>BFC | Best Food Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/hero-burger.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="script.js"></script>
 <body>
+
     <header>
         <nav class="navbar">
             <div class="logo">
                 <a href="#">BFC</a>
             </div>
-
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">BOOK</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
             <div class="user-options">
-                <a href=""#> Order Online</a>
+                <a href="#">Order Online</a>
             </div>
         </nav>
     </header>
     
     <section class="hero">
-        <div class="hero-content">
-            <h1> Fast Food Restaurant</h1>
+        <div class="hero-content reveal">
+            <h1>Fast Food Restaurant</h1>
             <p>
                 Delicious burgers, crispy fries, and cold drinks.
-                Experience the best flavors in town, prepared fresh evry single day!
+                Experience the best flavors in town, prepared fresh every single day!
             </p>
+            <a href="#menu" class="btn-yellow">Order Now</a>
         </div>
     </section>
 
-    <section class="menu-section">
-    <h2 class="section-title">Our Menu</h2>
-    
-    <div class="menu-grid">
-        <div class="menu-card">
-            <div class="img-box">
-                <img src="https://www.pngall.com/wp-content/uploads/4/Burger-PNG-Free-Download.png" alt="Delicious Pizza">
-            </div>
-            <div class="detail-box">
-                <h5>Delicious Pizza</h5>
-                <p>Veniam debitis quaerat officiis quasi cupiditate quo ut.</p>
-                <div class="options">
-                    <h6>$20</h6>
-                    <a href="#" class="cart-btn">🛒</a>
-                </div>
-            </div>
+    <section class="menu-section" id="menu">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
+    <div class="menu-card reveal">
+        <div class="img-box">
+            <img src="images/pizza.jpg" alt="Pizza">
         </div>
-
-        <div class="menu-card">
-            <div class="img-box">
-                <img src="https://www.pngall.com/wp-content/uploads/4/Burger-PNG-Free-Download.png" alt="Tasty Burger">
+        <div class="detail-box">
+            <h5>Delicious Pizza</h5>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo ut.</p>
+            <div class="options">
+                <h6>$20</h6>
+                <a href="#" class="cart-btn">🛒</a>
             </div>
-            <div class="detail-box">
-                <h5>Tasty Burger</h5>
-                <p>Veniam debitis quaerat officiis quasi cupiditate quo ut.</p>
-                <div class="options">
-                    <h6>$15</h6>
-                    <a href="#" class="cart-btn">🛒</a>
-                </div>
-            </div>
-        </div>
-        </div>
-</section>
-
-<section class="about-section">
-    <div class="about-container">
-        <div class="about-img">
-            <img src="https://via.placeholder.com/500x600?text=Our+Story" alt="About Us">
-        </div>
-        <div class="about-text">
-            <h2>We Are Feane</h2>
-            <p>
-                Founded in 2026, Feane started as a small family kitchen with a big dream: 
-                to serve the most authentic, mouth-watering comfort food in the city. 
-                We believe in fresh ingredients, secret spice blends, and a warm atmosphere 
-                that makes everyone feel at home.
-            </p>
-            <a href="#" class="btn-yellow">Read More</a>
         </div>
     </div>
-</section>
 
-<section class="gallery-section">
-    <h2 class="section-title">Gallery</h2>
-    <div class="slider-container">
-        <div class="slider-wrapper">
-            <img src="https://via.placeholder.com/600x400?text=Food+1" class="slide">
-            <img src="https://via.placeholder.com/600x400?text=Food+2" class="slide">
-            <img src="https://via.placeholder.com/600x400?text=Food+3" class="slide">
-            <img src="https://via.placeholder.com/600x400?text=Food+4" class="slide">
-            <img src="https://via.placeholder.com/600x400?text=Food+5" class="slide">
-            <img src="https://via.placeholder.com/600x400?text=Food+6" class="slide">
+    <div class="menu-card reveal">
+        <div class="img-box">
+            <img src="images/hero-burger.png" alt="Burger">
         </div>
-        <button class="prev-btn">❮</button>
-        <button class="next-btn">❯</button>
+        <div class="detail-box">
+            <h5>Tasty Burger</h5>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo ut.</p>
+            <div class="options">
+                <h6>$15</h6>
+                <a href="#" class="cart-btn">🛒</a>
+            </div>
+        </div>
     </div>
-</section>
 
-<section class="contact-section reveal" id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact Us</h2>
+    <div class="menu-card reveal">
+        <div class="img-box">
+            <img src="images/frenchFries.jpg" alt="Fries">
+        </div>
+        <div class="detail-box">
+            <h5>Crispy Fries</h5>
+            <p>Golden brown, perfectly salted, and served with our signature house sauce.</p>
+            <div class="options">
+                <h6>$8</h6>
+                <a href="#" class="cart-btn">🛒</a>
+            </div>
+        </div>
+    </div>
+</div>
         
-        <div class="contact-wrapper">
-            <form class="contact-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="input-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-yellow">Send Message</button>
-            </form>
 
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.735596139718!2d-73.96710402349537!3d40.76783977138526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258eb899f0889%3A0xb5e90aa7d877ee1f!2sHunter%20College!5e0!3m2!1sen!2sus!4v1773197428080!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+            
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-container reveal">
+            <div class="about-img">
+                <img src="images/restaurant.jpg" alt="About Us">
+            </div>
+            <div class="about-text">
+                <h2>We Are BFC</h2>
+                <p>
+                    Founded in 2026, we started as a small family kitchen with a big dream: 
+                    to serve the most authentic, mouth-watering comfort food in the city. 
+                </p>
+                <a href="#" class="btn-yellow">Read More</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="gallery-section reveal">
+        <h2 class="section-title">Gallery</h2>
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <img src="images/frenchFries.jpg" class="slide">
+                <img src="images/hero-burger.jpg" class="slide">
+                <img src="images/pizza.jpg" class="slide">
+            </div>
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-wrapper reveal">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-yellow">Send Message</button>
+                </form>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.735594838559!2d-73.9645291!3d40.7678398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258eb899f0889%3A0xb5e90aa7d877ee1f!2sHunter%20College!5e0!3m2!1sen!2sus!4v1773353791312!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>📍 123 Burger St, NYC</p>
+                <p>📞 +1 234 567 890</p>
+            </div>
+            <div class="footer-box">
+                <h3 class="logo" style="font-size: 2rem;">BFC</h3>
+                <p>Follow us for daily deals!</p>
+            </div>
+            <div class="footer-box">
+                <h3>Hours</h3>
+                <p>Mon - Sun</p>
+                <p>10:00 AM - 11:00 PM</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 BFC Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
