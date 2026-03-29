@@ -70,34 +70,27 @@ footer { background: #222831; padding: 50px 10% 20px; text-align: center; }
 }
 
 @media (max-width: 768px) {
-    /* 1. Constrain the overall nav width and center it */
+    /* Stack the navbar elements */
     .navbar {
         flex-direction: column;
-        padding: 10px 5%;
-        max-width: 90%; /* Prevents it from touching the screen edges */
-        margin: 0 auto; /* Centers the nav bar on the screen */
+        padding: 10px;
     }
 
-    /* 2. Make the logo a bit smaller for better fit */
-    .logo a {
-        font-size: 28px;
-    }
-
-    /* 3. Reduce link spacing so they don't wrap too much */
+    /* Add space between logo and links */
     .nav-links {
-        margin-top: 10px;
+        margin-top: 15px;
+        flex-wrap: wrap; /* Allows links to go to a second line if needed */
         justify-content: center;
-        padding: 0;
+        padding-left: 0;
     }
 
     .nav-links li {
-        margin: 5px 10px; /* Thinner spacing between menu items */
+        margin: 5px 10px; /* Reduces spacing between links on small screens */
     }
 
-    /* 4. Shrink the order button so it fits the narrow layout */
-    .user-options a {
-        padding: 8px 15px;
-        font-size: 14px;
+    /* Hide the 'Order Online' button on very small screens or make it smaller */
+    .user-options {
+        margin-top: 15px;
     }
 }
 
@@ -154,4 +147,134 @@ footer { background: #222831; padding: 50px 10% 20px; text-align: center; }
     .footer-box h3 {
         margin-bottom: 10px;    /* Keeps headers from touching the text below */
     }
+}
+
+/* FLOATING CART BUTTON */
+.floating-cart-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ffbe33;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* CART PANEL */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Hidden by default off-screen */
+    width: 350px;
+    height: 100vh;
+    background: #222831;
+    color: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+}
+.cart-panel.open {
+    right: 0; /* Slides it in */
+}
+.cart-header {
+    padding: 20px;
+    background: #1a1e24;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cart-items {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #393e46;
+    padding-bottom: 10px;
+}
+.cart-item-details h4 { font-size: 14px; margin-bottom: 5px;}
+.cart-item-details p { color: #ffbe33; font-size: 12px;}
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+}
+.cart-footer {
+    padding: 20px;
+    background: #1a1e24;
+}
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.checkout-btn, .clear-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.checkout-btn { background: #ffbe33; color: white; }
+.clear-btn { background: #393e46; color: white; }
+.empty-msg { text-align: center; color: #777; margin-top: 50px; }
+
+/* Styling for the specific cart button in the options bar */
+.options .cart-btn {
+    text-decoration: none; /* Removes the underline */
+    color: white;           /* Sets the text and the cart icon to white */
+    display: flex;         /* Optional: keeps icon and 'Add' centered */
+    align-items: center;   /* Optional: vertically centers them */
+    gap: 5px;             /* Optional: space between 🛒 and Add */
+    transition: 0.3s;     /* Matches your other links */
+}
+
+/* Ensure it stays white, even if it has been clicked (visited) */
+.options .cart-btn:visited {
+    color: white;
+}
+
+/* Optional hover effect so users know they can click it */
+.options .cart-btn:hover {
+    color: red; /* Changes to yellow on hover, matching your theme */
 }
