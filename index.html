@@ -41,35 +41,35 @@
     <section class="menu-section" id="menu">
         <h2 class="section-title">Our Menu</h2>
         <div class="menu-grid">
-    <div class="menu-card reveal">
+    <div class="menu-card reveal" data-name="Delicious Pizza" data-price="14.99">
         <div class="img-box">
             <img src="images/pizza.jpg" alt="Pizza">
         </div>
         <div class="detail-box">
             <h5>Delicious Pizza</h5>
-            <p>Veniam debitis quaerat officiis quasi cupiditate quo ut.</p>
+            <p>New York's best pizza. and the way you like. </p>
             <div class="options">
-                <h6>$20</h6>
-                <a href="#" class="cart-btn">🛒</a>
+                <h6>$14.99</h6>
+                <a href="#" class="cart-btn add-to-cart">🛒Add</a>
             </div>
         </div>
     </div>
 
-    <div class="menu-card reveal">
+    <div class="menu-card reveal" data-name="Tasty Burger" data-price="13.99">
         <div class="img-box">
             <img src="images/hero-burger.png" alt="Burger">
         </div>
         <div class="detail-box">
             <h5>Tasty Burger</h5>
-            <p>Veniam debitis quaerat officiis quasi cupiditate quo ut.</p>
+            <p>100% beef patty, with house made sauce, served with french fries.</p>
             <div class="options">
-                <h6>$15</h6>
-                <a href="#" class="cart-btn">🛒</a>
+                <h6>$13.99</h6>
+                <a href="#" class="cart-btn add-to-cart">🛒Add</a>
             </div>
         </div>
     </div>
 
-    <div class="menu-card reveal">
+    <div class="menu-card reveal" data-name="Crispy Fries" data-price="4.99">
         <div class="img-box">
             <img src="images/frenchFries.jpg" alt="Fries">
         </div>
@@ -77,8 +77,22 @@
             <h5>Crispy Fries</h5>
             <p>Golden brown, perfectly salted, and served with our signature house sauce.</p>
             <div class="options">
-                <h6>$8</h6>
-                <a href="#" class="cart-btn">🛒</a>
+                <h6>$4.99</h6>
+                <a href="#" class="cart-btn add-to-cart">🛒Add</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-card reveal" data-name="Ceaser Salad" data-price="13.99">
+        <div class="img-box">
+            <img src="images/salad.jpg" alt="Fries">
+        </div>
+        <div class="detail-box">
+            <h5>Ceaser Salad</h5>
+            <p>Ceaser Salad served with house made dressing.</p>
+            <div class="options">
+                <h6>$13.99</h6>
+                <a href="#" class="cart-btn add-to-cart">🛒Add</a>
             </div>
         </div>
     </div>
@@ -154,6 +168,33 @@
         <p class="copyright">© 2026 BFC Restaurant. All Rights Reserved.</p>
     </footer>
 
+
+    <div class="floating-cart-btn" id="open-cart">
+        <span>🛒</span>
+        <div class="cart-badge" id="cart-count">0</div>
+    </div>
+
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart">✖</button>
+        </div>
+
+        <div class="cart-item" id="cart-items-container">
+            <p class="empty-msg">Your cart is empty!</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-section">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="clear-btn" id="clear-cart">Clear Cart</button>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
